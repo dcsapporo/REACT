@@ -1,0 +1,76 @@
+////////////HTML
+<div id='root'></div>
+//////////////////////////
+///////////REACT
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+};
+
+const element = (
+  <h1>
+    Hello, {formatName(user)}!
+  </h1>
+);
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<div>{element}</div>);
+///////////////////////////////////////////////
+///////////2nd REACT
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+};
+
+
+function getGreeting(user) {
+  if (user) {
+    return <div>{element}</div>;
+  }
+  return <h1>Hello, Stranger.</h1>;
+}
+
+const element = (
+  <h1>
+    Hello, {formatName(user)}!
+  </h1>
+);
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<div>{getGreeting()}</div>);
+///////////////////////////////////////////////////
+///////////////3rd REACT
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+};
+
+
+function getGreeting(user) {
+  if (user) {
+    return <div>{element}</div>;
+  }
+  return <h1>Hello, Stranger.</h1>;
+}
+
+const element = React.createElement(
+  "h1",
+  className= 'aisatsu',
+  " Hello, " + formatName(user) + "!",
+  " Good to see you here."
+);
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<div>{getGreeting(user)}</div>);
